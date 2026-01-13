@@ -15,11 +15,18 @@ if (!admin.apps.length) {
     // });
     
     // Option 3: For development - use environment variables
+    const privateKey = process.env.FIREBASE_PRIVATE_KEY;
+    
+    // Handle different formats of private key from environment variables
+    const formattedPrivateKey = privateKey
+        ? privateKey.replace(/\\n/g, '\n') // Convert literal \n to actual newlines
+        : undefined;
+    
     admin.initializeApp({
         credential: admin.credential.cert({
             projectId: process.env.FIREBASE_PROJECT_ID,
             clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-            privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n')
+            privateKey: formattedPrivateKey
         })
     });
 }
