@@ -1,0 +1,5 @@
+# ⚠️ IMPORTANT: Add this to .gitignore
+.env
+node_modules/
+.DS_Store
+*.log

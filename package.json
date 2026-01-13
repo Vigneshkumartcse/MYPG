@@ -1,0 +1,23 @@
+{
+  "name": "mypg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node Index.js",
+    "dev": "nodemon Index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "mongoose": "^9.0.2",
+    "nodemon": "^3.1.11"
+  }
+}
